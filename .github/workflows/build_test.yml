@@ -47,4 +47,11 @@ jobs:
 #        version_label: 12348
 #        region: "us-east-2"
 #        deployment_package: deploy.zip
-#
+    # Run Prisma Cloud Bridgecrew
+    - name: Run Bridgecrew 
+      id: Bridgecrew
+      uses: bridgecrewio/bridgecrew-action@master 
+      env:
+        PRISMA_API_URL: https://api.eu.prismacloud.io
+      with:
+        api-key: ${{ secrets.BC_API_KEY }}
