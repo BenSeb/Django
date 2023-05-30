@@ -1,3 +1,4 @@
+# test comment
 from django.apps import AppConfig
 
 
